@@ -180,11 +180,23 @@
 // Напиши функцию checkForSpam(message), принимающую 1 параметр message - строку. Функция проверяет ее на содержание слов spam и sale. Если нашли запрещенное слово то функция возвращает true, если запрещенных слов нет функция возвращает false. Слова в строке могут быть в произвольном регистре.
 //1- приводим строку к нижнему регистру
 //2- с помощью тернарника ищем слова и выводим
-function checkForSpam(str) {
-    let message =
-        str.toLowerCase().includes('sale') || str.toLowerCase().includes('spam')
-            ? true
-            : false;
-    return message;
-}
-console.log(checkForSpam('Get best sale offers now!')); // false
+// function checkForSpam(str) {
+//     let message =
+//         str.toLowerCase().includes('sale') || str.toLowerCase().includes('spam')
+//             ? true
+//             : false;
+//     return message;
+// }
+// console.log(checkForSpam('Get best sale offers now!')); // true
+//-----------------------task6
+// Создание нового массива на основе преобразования данных из старого массива
+// Напиши функцию mapArray(array), принимающую 1 параметр array - массив чисел. Функция создает новый массив numbers размером в длину массива array и заполняет его числами из массива array умноженными на 10. Для перебора массива и добавления новых значений используй цикл for. По завершению перебора массива array возвращается массив numbers.
+// function mapArray(array) {
+//     const numbers = new Array(array.length);
+//     for (let i = 0; i < array.length; i += 1) {
+//         numbers[i] = array[i] * 10;
+//     }
+//     return numbers;
+// }
+// console.log(mapArray([-2, 0, 2]));
+// [-20, 0, 20]

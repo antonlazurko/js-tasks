@@ -1,3 +1,4 @@
+//--------------MODULE 1
 //--------------task #1
 // const name = '«Генератор защитного поля»';
 // let price = 1000;
@@ -100,3 +101,24 @@
 //     message = `Доставка в ${country} будет стоить ${price} кредитов`;
 // }
 // console.log(message);
+//------------task6
+// console.log('ABC'.charCodeAt(0));
+// const source = 'Привет';
+// let messege;
+// for (let i = 0; i <= source.length; i += 1) {
+//     let unicode = source.charCodeAt(i);
+
+//     messege = `${i}: ${unicode}`;
+// }
+// console.log(messege);
+//-----------------------MODULE 2
+//-----------------------task1
+// const getItemsString1 = function (array) {
+//     let result = '';
+
+//     for (let i = 0; i < array.length; i += 1) {
+//         result += `${i + 1} - ${array[i]}\n`;
+//     }
+//     return result;
+// };
+// console.log(getItemsString1(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']));

@@ -135,3 +135,22 @@
 //         10,
 //     ),
 // );
+//-----------------------task3
+//1- привести строку в массив
+//2- пройтись по массиву
+//3- найти большее по длине слово
+//4- вернуть это слово
+// function findLongestWord(string = '') {
+//     let array = string.split(' ');
+//     console.log(array);
+//     let bigestWord = '';
+//     for (const word of array) {
+//         if (bigestWord.length < word.length) {
+//             bigestWord = word;
+//         }
+//     }
+//     return bigestWord;
+// }
+
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+// 'jumped'

@@ -154,3 +154,22 @@
 
 // console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
 // 'jumped'
+//-----------------------task4
+// Форматирование строки в зависимости от длинны строки
+// Напиши функцию formatString(string, maxLength = 40) которая принимает строку и форматирует ее если необходимо.
+
+// Если длина строки не превышает maxLength, функция возвращает ее в исходном виде.
+// Если длина больше maxLength, то функция обрезает строку до размера maxLength символов и добавляет в конец строки троеточие ..., после чего возвращает укороченную версию.
+//1- проверяем длину строки
+//2- с помощью тернарника вырезаем из строки нужное количество слов и присваиваем другой переменной ил оставляем как есть
+// function formatString(string, maxLength = 40) {
+//     let currentString =
+//         maxLength <= string.length
+//             ? `${string.slice(0, maxLength)}...`
+//             : string;
+//     return currentString;
+// }
+
+// console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+// 'Curabitur ligula sapien, tincidunt non.'
+// const maxLength = 40;

@@ -173,3 +173,18 @@
 // console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // 'Curabitur ligula sapien, tincidunt non.'
 // const maxLength = 40;
+//-----------------------task5
+// Функция предикат
+// Функция предикат возвращает true или false
+
+// Напиши функцию checkForSpam(message), принимающую 1 параметр message - строку. Функция проверяет ее на содержание слов spam и sale. Если нашли запрещенное слово то функция возвращает true, если запрещенных слов нет функция возвращает false. Слова в строке могут быть в произвольном регистре.
+//1- приводим строку к нижнему регистру
+//2- с помощью тернарника ищем слова и выводим
+function checkForSpam(str) {
+    let message =
+        str.toLowerCase().includes('sale') || str.toLowerCase().includes('spam')
+            ? true
+            : false;
+    return message;
+}
+console.log(checkForSpam('Get best sale offers now!')); // false

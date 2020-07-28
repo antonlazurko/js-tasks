@@ -122,3 +122,16 @@
 //     return result;
 // };
 // console.log(getItemsString1(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']));
+//-----------------------task2
+//1 привести строку в массив
+//2 посчитать длину массива
+//3 перемножить длину на стоимость одного слова
+// const calculateEngravingPrice = (message = '', pricePerWord = 0) =>
+//     pricePerWord * message.split(' ').length;
+
+// console.log(
+//     calculateEngravingPrice(
+//         'Proin sociis natoque et magnis parturient montes mus',
+//         10,
+//     ),
+// );

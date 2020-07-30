@@ -126,36 +126,35 @@
 
 // проходить проверку на длину от 4 до 16 - ти символов включительно
 // быть уникален, то есть отсутствовать в массиве logins
-function isLoginValid(login, min = 4, max = 16) {
-    const result = min <= login.length && login.length <= max ? true : false;
-    return result;
-}
+// function isLoginValid(login, min = 4, max = 16) {
+//     return = min <= login.length && login.length <= max ? true : false;
+//     // }
 
-function isLoginUnique(allLogins, login) {
-    const result = allLogins.includes(login) ? false : true;
-    return result;
-}
+// function isLoginUnique(allLogins, login) {
+//     return = allLogins.includes(login) ? false : true;
+//
+// }
 
-function addLogin(allLogins, login) {
-    const SUCCESS = 'Логин успешно добавлен!';
-    const REFUSAL = 'Такой логин уже используется!';
-    const ERROR = 'Ошибка! Логин должен быть размером от 4 до 16 символов';
-    let message;
-    if (isLoginValid(login)) {
-        if (isLoginUnique(allLogins, login)) {
-            message = SUCCESS;
-            allLogins.push(login);
-        } else {
-            message = REFUSAL;
-        }
-    } else {
-        message = ERROR;
-    }
-    return message;
-}
-let logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+// function addLogin(allLogins, login) {
+//     const SUCCESS = 'Логин успешно добавлен!';
+//     const REFUSAL = 'Такой логин уже используется!';
+//     const ERROR = 'Ошибка! Логин должен быть размером от 4 до 16 символов';
+//     let message;
+//     if (isLoginValid(login)) {
+//         if (isLoginUnique(allLogins, login)) {
+//             message = SUCCESS;
+//             allLogins.push(login);
+//         } else {
+//             message = REFUSAL;
+//         }
+//     } else {
+//         message = ERROR;
+//     }
+//     return message;
+// }
+// let logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-console.log(addLogin(logins, 'Ajax'));
-console.log(logins);
+// console.log(addLogin(logins, 'Ajax'));
+// console.log(logins);
 
 // 'Логин успешно добавлен!'

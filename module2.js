@@ -144,7 +144,7 @@ function addLogin(allLogins, login) {
     if (isLoginValid(login)) {
         if (isLoginUnique(allLogins, login)) {
             message = SUCCESS;
-            logins.push(login);
+            allLogins.push(login);
         } else {
             message = REFUSAL;
         }

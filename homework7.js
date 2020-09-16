@@ -1,14 +1,12 @@
 const amountItems = document.querySelectorAll('.item');
 console.log(`В списке ${amountItems.length} категории.`);
-document
-    .querySelectorAll('.item h2')
-    .forEach(text => console.log(`Категория: ${text.textContent}`));
-const makeCtegoryList = document.querySelectorAll('.item ul');
-makeCtegoryList.forEach(el =>
-    console.log(`Количество элементов: ${el.children.length}`),
+const itemList = document.querySelectorAll('.item');
+itemList.forEach(el =>
+    console.log(
+        `Категория: ${el.children[0].textContent}\nКоличество элементов: ${el.children[1].children.length}`,
+    ),
 );
 //---------------------------------------------1
-
 const ingredients = [
     'Картошка',
     'Грибы',
@@ -17,15 +15,16 @@ const ingredients = [
     'Зелень',
     'Приправы',
 ];
-let item = '';
+let itemEl = '';
 const ingredientsList = document.querySelector('#ingredients');
-const list = ingredients.map(option => {
-    item = document.createElement('li');
-    item.textContent = option;
+const ingredientsArray = ingredients.map(option => {
+    itemEl = document.createElement('li');
+    itemEl.textContent = option;
+    //строка ниже не входит в ТЗ
     ingredientsList.style.listStyle = 'none';
-    return item;
+    return itemEl;
 });
-ingredientsList.append(...list);
+ingredientsList.append(...ingredientsArray);
 console.log(ingredientsList);
 //-------------------------------2
 const images = [
@@ -46,18 +45,41 @@ const images = [
     },
 ];
 const imagesList = document.querySelector('#gallery');
-let imgItem = '';
 const imageArray = images.map(option => {
-    imgItem = document.createElement('li');
-    imgItem.style.display = 'block';
-    imgItem.style.marginLeft = '15px';
-    imagesList.style.display = 'flex';
-    imgItem.insertAdjacentHTML(
+    let imgEl = document.createElement('li');
+    imgEl.classList.add('gallary__item');
+    imgEl.insertAdjacentHTML(
         'afterbegin',
-        `<img src="${option.url}" alt="${option.alt}" width="50" height="50">`,
+        `<img src="${option.url}" alt="${option.alt}" >`,
     );
-    return imgItem;
+    return imgEl;
 });
 imagesList.append(...imageArray);
 console.log(imagesList);
 //-------------------------------3
+const counter = {
+    counterValue: 0,
+    increment() {
+        this.counterValue += 1;
+    },
+    decrement() {
+        this.counterValue -= 1;
+    },
+};
+const incrementBtn = document.querySelector(
+    '#counter button[data-action="increment"]',
+);
+const decrementBtn = document.querySelector(
+    '#counter button[data-action="decrement"]',
+);
+const valueEl = document.querySelector('#value');
+
+incrementBtn.addEventListener('click', function () {
+    counter.increment();
+    valueEl.textContent = counter.counterValue;
+});
+decrementBtn.addEventListener('click', function () {
+    counter.decrement();
+    valueEl.textContent = counter.counterValue;
+});
+//-------------------------------4

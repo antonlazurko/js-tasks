@@ -20,8 +20,6 @@ const ingredientsList = document.querySelector('#ingredients');
 const ingredientsArray = ingredients.map(option => {
     itemEl = document.createElement('li');
     itemEl.textContent = option;
-    //строка ниже не входит в ТЗ
-    ingredientsList.style.listStyle = 'none';
     return itemEl;
 });
 ingredientsList.append(...ingredientsArray);
@@ -83,3 +81,12 @@ decrementBtn.addEventListener('click', function () {
     valueEl.textContent = counter.counterValue;
 });
 //-------------------------------4
+const inputText = document.querySelector('#name-input');
+const outputTextContent = document.querySelector('#name-output');
+console.log(inputText);
+console.log(outputTextContent.textContent);
+inputText.addEventListener('input', takeInputText);
+function takeInputText(event) {
+    outputTextContent.textContent = event.currentTarget.value;
+}
+//--------------------------------5;

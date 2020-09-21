@@ -23,7 +23,6 @@ const ingredientsArray = ingredients.map(option => {
     return itemEl;
 });
 ingredientsList.append(...ingredientsArray);
-console.log(ingredientsList);
 //-------------------------------2
 const images = [
     {
@@ -53,7 +52,6 @@ const imageArray = images.map(option => {
     return imgEl;
 });
 imagesList.append(...imageArray);
-console.log(imagesList);
 //-------------------------------3
 const counter = {
     counterValue: 0,
@@ -83,10 +81,29 @@ decrementBtn.addEventListener('click', function () {
 //-------------------------------4
 const inputText = document.querySelector('#name-input');
 const outputTextContent = document.querySelector('#name-output');
-console.log(inputText);
-console.log(outputTextContent.textContent);
 inputText.addEventListener('input', takeInputText);
 function takeInputText(event) {
-    outputTextContent.textContent = event.currentTarget.value;
+    if (event.currentTarget.value !== '') {
+        outputTextContent.textContent = event.currentTarget.value;
+    } else outputTextContent.textContent = 'незнакомец';
 }
 //--------------------------------5;
+const inputText6 = document.querySelector('#validation-input');
+inputText6.addEventListener('blur', checkValidInputLength);
+function takeInputText6(event) {
+    console.log(event.currentTarget.value.length);
+}
+console.log(inputText6.getAttribute('data-length'));
+function checkValidInputLength(event) {
+    if (
+        event.currentTarget.value.length ===
+        Number(inputText6.getAttribute('data-length'))
+    ) {
+        inputText6.classList.remove('invalid');
+        inputText6.classList.add('valid');
+    } else {
+        inputText6.classList.remove('valid');
+        inputText6.classList.add('invalid');
+    }
+}
+//--------------------------------6;
